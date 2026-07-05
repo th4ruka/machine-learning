@@ -105,6 +105,6 @@ submission = pd.DataFrame(
         "health_condition": [INV_LABEL_MAP[i] for i in test_probs.argmax(axis=1)],
     }
 )
-submission.to_csv("submission_v08.csv", index=False)
+submission.to_csv("submissions/submission_v08.csv", index=False)
 print("\npredicted class distribution:")
 print(submission["health_condition"].value_counts(normalize=True).round(3))

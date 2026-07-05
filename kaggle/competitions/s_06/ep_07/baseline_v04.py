@@ -111,6 +111,6 @@ test_pred = (test_probs * [1.0, w1, w2]).argmax(axis=1)
 submission = pd.DataFrame(
     {"id": test["id"], "health_condition": [INV_LABEL_MAP[i] for i in test_pred]}
 )
-submission.to_csv("submission_v04.csv", index=False)
+submission.to_csv("submissions/submission_v04.csv", index=False)
 print("\npredicted class distribution:")
 print(submission["health_condition"].value_counts(normalize=True).round(3))

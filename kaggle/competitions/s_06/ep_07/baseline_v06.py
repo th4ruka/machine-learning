@@ -141,6 +141,6 @@ submission = pd.DataFrame(
         "health_condition": [INV_LABEL_MAP[i] for i in blend_test.argmax(axis=1)],
     }
 )
-submission.to_csv("submission_v06.csv", index=False)
+submission.to_csv("submissions/submission_v06.csv", index=False)
 print("\npredicted class distribution:")
 print(submission["health_condition"].value_counts(normalize=True).round(3))
